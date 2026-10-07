@@ -1,0 +1,774 @@
+/* =========================
+   CONFIGURACION GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+
+    /* Espacio para el navbar fijo */
+    padding-top:75px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    width:100%;
+    height:75px;
+
+    background:#1f2764;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
+
+    transition:background-color .4s ease, box-shadow .4s ease;
+}
+
+header.scrolled{
+    background:#1f2764;
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+    width:80px;
+    margin-left:-30px;
+}
+
+.logo a{
+    display:block;
+}
+
+.logo img{
+    width:75px;
+    height:auto;
+    display:block;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    display:flex;
+    align-items:center;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-size:16px;
+}
+
+.navbar a:hover{
+    color:#9adfff;
+}
+
+
+/* =========================
+   MENU HAMBURGUESA
+========================= */
+
+.menu-hamburguesa{
+    display:none;
+
+    width:45px;
+    height:45px;
+
+    padding:8px;
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:5px;
+
+    position:relative;
+
+    z-index:1001;
+}
+
+.menu-hamburguesa span{
+    display:block;
+
+    width:28px;
+    height:3px;
+
+    background-color:#ffffff;
+
+    border-radius:3px;
+
+    transition:.3s;
+}
+
+
+/* =========================
+   USUARIO
+========================= */
+
+.usuario-nav{
+    display:flex;
+    align-items:center;
+}
+
+.inicio-de-sesion{
+    white-space:nowrap;
+}
+
+
+/* =========================
+   CARRITO
+========================= */
+
+.icono-nav{
+    position:relative;
+
+    font-size:21px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-left:8px;
+
+    text-decoration:none;
+}
+
+.carrito-icono{
+    position:relative;
+}
+
+#contador-carrito{
+    position:absolute;
+
+    top:-9px;
+    right:-10px;
+
+    width:18px;
+    height:18px;
+
+    background:#e30613;
+    color:white;
+
+    border-radius:50%;
+
+    font-size:11px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.destino-portada{
+    width:100%;
+    margin:0;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.destino-portada img{
+    width:100%;
+    height:520px;
+
+    object-fit:cover;
+    object-position:center;
+
+    display:block;
+}
+
+
+/* =========================
+   TITULO SOBRE IMAGEN
+========================= */
+
+.destino-titulo{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:100px 2% 45px;
+    color:white;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+}
+
+.destino-titulo h2{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.destino-titulo p{
+    font-size:21px;
+}
+
+
+/* =========================
+   INFORMACION
+========================= */
+
+.informacion-destino{
+    width:90%;
+
+    margin:70px auto;
+
+    text-align:center;
+}
+
+.informacion-destino h2{
+    color:#0b5ed7;
+
+    font-size:38px;
+
+    margin-bottom:25px;
+}
+
+.informacion-destino p{
+    max-width:900px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   LUGARES TURISTICOS
+========================= */
+
+.lugares{
+    width:90%;
+
+    margin:70px auto;
+
+    text-align:center;
+}
+
+.lugares h2{
+    color:#0b5ed7;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+}
+
+.lugares-contenedor{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.lugar{
+    flex:1;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.lugar img{
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.lugar h3{
+    color:#0b5ed7;
+
+    font-size:25px;
+
+    margin:20px 15px 10px;
+}
+
+.lugar p{
+    color:#666;
+
+    padding:0 20px 25px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   INFORMACION DEL VIAJE
+========================= */
+
+.datos-viaje{
+    width:90%;
+
+    margin:70px auto;
+
+    text-align:center;
+}
+
+.datos-viaje h2{
+    color:#0b5ed7;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+}
+
+.datos-contenedor{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.dato{
+    flex:1;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.dato h3{
+    color:#0b5ed7;
+
+    font-size:22px;
+
+    margin-bottom:12px;
+}
+
+.dato p{
+    color:#666;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   PRECIO
+========================= */
+
+.precio-viaje{
+    width:80%;
+    max-width:800px;
+
+    margin:80px auto;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:20px;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.precio-viaje h2{
+    color:#0b5ed7;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+}
+
+.precio-viaje .desde{
+    color:#666;
+
+    font-size:18px;
+}
+
+.precio-viaje h1{
+    font-size:65px;
+
+    color:#222;
+
+    margin:15px 0;
+}
+
+.precio-viaje p{
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#11182f;
+
+    color:white;
+
+    padding:50px 7% 0;
+
+    margin-top:80px;
+}
+
+.footer-container{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    padding-bottom:40px;
+}
+
+
+/* =========================
+   LOGO DEL FOOTER
+========================= */
+
+.footer-logo{
+    max-width:220px;
+}
+
+.footer-logo img{
+    width:100px;
+
+    height:auto;
+
+    margin-bottom:15px;
+}
+
+.footer-logo p{
+    color:#ddd;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   COLUMNAS
+========================= */
+
+.footer-column{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.footer-column h3{
+    margin-bottom:10px;
+}
+
+.footer-column a{
+    color:#ddd;
+
+    text-decoration:none;
+}
+
+.footer-column a:hover{
+    color:white;
+}
+
+
+/* =========================
+   PARTE INFERIOR FOOTER
+========================= */
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding:20px 0;
+
+    text-align:center;
+
+    color:#aaa;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    header{
+        padding:0 20px;
+    }
+
+    .navbar a{
+        margin-left:12px;
+
+        font-size:14px;
+    }
+
+    .destino-portada img{
+        height:430px;
+    }
+
+    .destino-titulo h2{
+        font-size:40px;
+    }
+
+    .lugares-contenedor{
+        flex-direction:column;
+    }
+
+    .datos-contenedor{
+        flex-direction:column;
+    }
+
+    .precio-viaje{
+        width:90%;
+
+        padding:40px 25px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:600px){
+
+    body{
+        padding-top:75px;
+    }
+
+    header{
+        height:75px;
+
+        min-height:75px;
+
+        flex-direction:row;
+
+        padding:0 20px;
+
+        gap:0;
+    }
+
+    .logo{
+        width:80px;
+
+        margin-left:0;
+    }
+
+    .logo img{
+        width:70px;
+    }
+
+
+    /* =========================
+       MENU HAMBURGUESA MOVIL
+    ========================= */
+
+    .menu-hamburguesa{
+        display:flex;
+
+        position:absolute;
+
+        right:20px;
+
+        top:50%;
+
+        transform:translateY(-50%);
+
+        z-index:1001;
+    }
+
+    .navbar{
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        width:100%;
+
+        background:#1f2764;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        padding:10px 0 15px;
+
+        gap:0;
+
+        box-shadow:0 5px 12px rgba(0,0,0,.20);
+
+        z-index:1000;
+    }
+
+    .navbar.menu-abierto{
+        display:flex;
+    }
+
+    .navbar a{
+        width:100%;
+
+        margin:0;
+
+        padding:15px 25px;
+
+        font-size:16px;
+
+        text-align:left;
+    }
+
+    .navbar a:hover{
+        background:rgba(255,255,255,.08);
+
+        color:white;
+    }
+
+    .navbar .usuario-nav{
+        width:100%;
+
+        padding:0;
+
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .navbar .inicio-de-sesion{
+        width:100%;
+
+        padding:15px 25px;
+
+        margin:0;
+    }
+
+    .navbar .icono-nav{
+        width:100%;
+
+        justify-content:flex-start;
+
+        padding:15px 25px;
+
+        margin:0;
+    }
+
+    .navbar .carrito-icono{
+        padding-left:25px;
+    }
+
+
+    /* =========================
+       CONTENIDO MOVIL
+    ========================= */
+
+    .destino-portada img{
+        height:320px;
+    }
+
+    .destino-titulo{
+        padding:70px 25px 25px;
+    }
+
+    .destino-titulo h2{
+        font-size:32px;
+    }
+
+    .destino-titulo p{
+        font-size:16px;
+    }
+
+    .informacion-destino h2,
+    .lugares h2,
+    .datos-viaje h2,
+    .precio-viaje h2{
+        font-size:30px;
+    }
+
+    .precio-viaje h1{
+        font-size:50px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+
+        text-align:center;
+
+        align-items:center;
+    }
+
+    .footer-column{
+        align-items:center;
+    }
+
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Reservar vuelo - Altioria Airlines</title>
+    <link rel="icon" href="../IMG/logo empresa de software.svg">
+    <link rel="stylesheet" href="../CSS/reservar vuelo.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="../IMG/logo empresa de software.svg" alt="Logo Altioria Airlines">
+        </div>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./destinos.html">Destinos</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="reserva">
+
+            <div class="reserva-titulo">
+
+                <h1>Reserva tu vuelo</h1>
+
+                <p>
+                    Prepara tu proximo viaje con Altioria Airlines.
+                </p>
+
+            </div>
+
+
+            <form>
+
+                <div class="campo">
+
+                    <label for="origen">
+                        Ciudad de origen
+                    </label>
+
+                    <input
+                        type="text"
+                        id="origen"
+                        placeholder="Ej. San Salvador"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="destino">
+                        Ciudad de destino
+                    </label>
+
+                    <input
+                        type="text"
+                        id="destino"
+                        placeholder="Ej. Madrid"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="salida">
+                        Fecha de salida
+                    </label>
+
+                    <input
+                        type="date"
+                        id="salida"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="regreso">
+                        Fecha de regreso
+                    </label>
+
+                    <input
+                        type="date"
+                        id="regreso"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="pasajeros">
+                        Pasajeros
+                    </label>
+
+                    <input
+                        type="number"
+                        id="pasajeros"
+                        min="1"
+                        value="1"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="clase">
+                        Clase
+                    </label>
+
+                    <select id="clase">
+
+                        <option>Economica</option>
+                        <option>Ejecutiva</option>
+                        <option>Primera clase</option>
+
+                    </select>
+
+                </div>
+
+
+                <a href="vuelos.html" class="buscar-vuelos" id="buscarVuelos">
+                    Buscar vuelos
+                </a>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Altioria Airlines - Todos los derechos reservados.
+        </p>
+
+    </footer>
+    
+    <script src="../JS/vuelos.js"></script>
+
+</body>
+
+</html>

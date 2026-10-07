@@ -1,0 +1,1109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    height: 75px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color .4s ease, box-shadow .4s ease;
+}
+
+header.scrolled {
+    background: #1f2764;
+    box-shadow: 0 3px 12px rgba(0,0,0,.20);
+}
+
+.logo {
+    width: 80px;
+    margin-left: -30px;
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #9adfff;
+}
+
+.login-nav {
+    white-space: nowrap;
+}
+
+
+/* ================= MENU HAMBURGUESA ================= */
+
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+}
+
+
+/* ================= CARRITO ================= */
+
+.icono-nav {
+    position: relative;
+    font-size: 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+.carrito-icono {
+    position: relative;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    background: #e30613;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 110px 60px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero-content p {
+    margin: 15px 0 25px;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.btn-reservar {
+    display: inline-block;
+    background: #0A2E7D;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 35px;
+}
+
+.btn-reservar:hover {
+    background: #e30613;
+}
+
+
+/* ================= RESERVAS ================= */
+
+.reservas {
+    width: 95%;
+    max-width: 1400px;
+    margin: 55px auto;
+    background: #fff;
+    padding: 35px 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.reservas-container h2 {
+    text-align: center;
+    color: #20275C;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.tipo-viaje {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    color: #20275C;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tipo-viaje label {
+    cursor: pointer;
+}
+
+.reserva-form {
+    display: grid;
+    grid-template-columns: 1fr 35px 1fr 1fr 1fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    color: #20275C;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 58px;
+    padding: 0 15px;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #20275C;
+    box-shadow: 0 0 0 2px rgba(32,39,92,.08);
+}
+
+.intercambiar {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #aaa;
+    background: white;
+    color: #20275C;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 11px;
+}
+
+.intercambiar:hover {
+    background: #20275C;
+    color: white;
+}
+
+.btn-buscar {
+    height: 58px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+    background: #20275C;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-buscar:hover {
+    background: #e30613;
+}
+
+
+/* ================= RESULTADOS ================= */
+
+.resultados-vuelos {
+    display: none;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto 60px;
+}
+
+.resultados-vuelos.mostrar {
+    display: block;
+}
+
+.resultados-container h2 {
+    color: #20275C;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+#resumen-busqueda {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.vuelo {
+    display: grid;
+    grid-template-columns: 150px 1fr 220px 170px;
+    align-items: center;
+    gap: 25px;
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+    border-left: 5px solid #20275C;
+}
+
+.vuelo-codigo {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.vuelo-ruta {
+    color: #20275C;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.vuelo-horario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hora {
+    text-align: center;
+}
+
+.hora strong {
+    display: block;
+    color: #20275C;
+    font-size: 22px;
+}
+
+.hora span {
+    color: #777;
+    font-size: 13px;
+}
+
+.linea-vuelo {
+    width: 70px;
+    height: 2px;
+    background: #20275C;
+}
+
+.detalles-vuelo {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.precio-vuelo {
+    text-align: right;
+}
+
+.precio-vuelo small {
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.precio-vuelo strong {
+    display: block;
+    color: #20275C;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.seleccionar-vuelo {
+    border: none;
+    background: #20275C;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.seleccionar-vuelo:hover {
+    background: #e30613;
+}
+
+.sin-vuelos {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.10);
+}
+
+.sin-vuelos h3 {
+    color: #20275C;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sin-vuelos p {
+    color: #666;
+}
+
+
+/* ================= SERVICIOS ================= */
+
+.servicios {
+    width: 100%;
+    padding: 50px 60px;
+    background: #fff;
+    text-align: center;
+}
+
+.section-title h2 {
+    color: #0A2E7D;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.servicio {
+    width: 210px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,.15);
+    padding: 25px 20px;
+    transition: .3s;
+}
+
+.servicio:hover {
+    transform: translateY(-8px);
+}
+
+.servicio-icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    color: #1d2d50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* ================= DESTINOS ================= */
+
+.destinos {
+    width: 100%;
+    background: #fff;
+    padding: 40px 40px 60px;
+    text-align: center;
+}
+
+.destinos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.destino-card {
+    position: relative;
+    width: 360px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.destino-imagen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.destino-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destino-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,.75));
+}
+
+.destino-info {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    text-align: left;
+}
+
+.destino-info h3 {
+    font-size: 25px;
+}
+
+.destino-info p {
+    margin: 5px 0 12px;
+}
+
+.destino-info span {
+    font-size: 14px;
+}
+
+
+/* ================= OFERTAS ================= */
+
+.section-title {
+    text-align: center;
+}
+
+.ofertas {
+    padding: 60px 40px;
+    background: #f7f7f7;
+}
+
+.ofertas-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.oferta-card {
+    position: relative;
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.oferta-imagen,
+.oferta-imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.oferta-imagen img {
+    object-fit: cover;
+}
+
+.oferta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.8));
+}
+
+.oferta-info {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 20px;
+    color: white;
+}
+
+.oferta-info span {
+    font-size: 14px;
+    background: #e30613;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.oferta-info h3 {
+    font-size: 23px;
+    margin: 12px 0 8px;
+}
+
+.oferta-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* ================= EXPERIENCIA ================= */
+
+.experiencia {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 8%;
+}
+
+.experiencia-imagen {
+    width: 50%;
+}
+
+.experiencia-imagen img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.experiencia-content {
+    width: 50%;
+}
+
+.experiencia-content h2 {
+    color: #20275C;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.experiencia-content p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn-experiencia,
+.btn-promocion {
+    display: inline-block;
+    background: #20275C;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+}
+
+.btn-experiencia:hover,
+.btn-promocion:hover {
+    background: #e30613;
+}
+
+
+/* ================= PROMOCION ================= */
+
+.promocion {
+    padding: 80px 20px;
+    background: #20275C;
+    text-align: center;
+    color: white;
+}
+
+.promocion-content h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.promocion-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-promocion {
+    background: white;
+    color: #20275C;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #11182f;
+    color: white;
+    padding: 50px 7% 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding: 20px 0;
+    text-align: center;
+    color: #aaa;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px) {
+
+    .reserva-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intercambiar {
+        display: none;
+    }
+
+    .servicios-container {
+        flex-wrap: wrap;
+    }
+
+    .vuelo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .precio-vuelo {
+        text-align: left;
+    }
+
+}
+
+@media(max-width:900px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+
+    .reserva-form {
+        grid-template-columns: 1fr;
+    }
+
+    .tipo-viaje {
+        justify-content: center;
+    }
+
+    .destinos-container,
+    .ofertas-container {
+        flex-wrap: wrap;
+    }
+
+    .experiencia {
+        flex-direction: column;
+    }
+
+    .experiencia-imagen,
+    .experiencia-content {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* ================= MENU HAMBURGUESA MOVIL ================= */
+
+@media(max-width:600px) {
+
+    header {
+        height: 75px;
+        min-height: 75px;
+        flex-direction: row;
+        padding: 0 20px;
+        gap: 0;
+    }
+
+    .logo {
+        margin-left: -5px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #1f2764;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0 15px;
+        box-shadow: 0 5px 12px rgba(0,0,0,.20);
+    }
+
+    .navbar.menu-abierto {
+        display: flex;
+    }
+
+    .navbar > a,
+    .navbar .usuario-nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar > a {
+        padding: 15px 25px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .navbar > a:hover {
+        background: rgba(255,255,255,.08);
+        color: white;
+    }
+
+    .navbar .usuario-nav {
+        padding: 0;
+    }
+
+    .navbar .usuario-nav > a,
+    .navbar .usuario-nav > .usuario-activo {
+        display: flex;
+        width: 100%;
+        padding: 15px 25px;
+        margin: 0;
+    }
+
+    .navbar .icono-nav {
+        justify-content: flex-start;
+    }
+
+    .navbar .carrito-icono {
+        padding-left: 25px;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content {
+        padding: 80px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .reservas {
+        width: 92%;
+        padding: 25px 20px;
+    }
+
+    .servicios {
+        padding: 40px 20px;
+    }
+
+    .destinos,
+    .ofertas {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .destino-card,
+    .oferta-card {
+        width: 100%;
+    }
+
+    .vuelo {
+        grid-template-columns: 1fr;
+    }
+
+    .vuelo-horario {
+        justify-content: flex-start;
+    }
+
+    .experiencia {
+        padding: 50px 25px;
+    }
+
+}
+
+
+/* ================= DESTINOS ================= */
+
+.destinos {
+    width: 100%;
+    background: #fff;
+    padding: 40px 40px 60px;
+    text-align: center;
+}
+
+.destinos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.destino-card {
+    position: relative;
+    width: 360px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    transition: .3s;
+}
+
+.destino-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,.35);
+}
+
+.destino-imagen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.destino-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.destino-card:hover .destino-imagen img {
+    transform: scale(1.08);
+}
+
+.destino-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.75)
+    );
+}
+
+.destino-info {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    text-align: left;
+    z-index: 2;
+}
+
+.destino-info h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.destino-info p {
+    margin-bottom: 12px;
+}
+
+.destino-info span {
+    font-size: 14px;
+}
+
+
+/* ================= USUARIO ================= */
+
+.usuario-nav {
+    display: flex;
+    align-items: center;
+}
+
+.usuario-activo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.usuario-inicial {
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: #20275c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.usuario-nombre {
+    color: white;
+    font-weight: bold;
+}
+
+.usuario-activo:hover {
+    color: white;
+}
+
+.usuario-activo:hover .usuario-inicial {
+    background: #e30613;
+    color: white;
+}
+
+
+/* ================= CUENTA ACTIVA ================= */
+
+.usuario-nav {
+    display: flex;
+    align-items: center;
+}
+
+.usuario-activo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.usuario-inicial {
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: #20275c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.usuario-datos {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.usuario-nombre {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cuenta-activa {
+    color: #7cff8a;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.usuario-activo:hover .usuario-inicial {
+    background: #e30613;
+    color: white;
+}
+
+
+/* ==================== WHATSAPP FLOTANTE ==================== */
+
+.whatsapp-flotante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 25px;
+    bottom: 25px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-flotante img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.35);
+}

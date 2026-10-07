@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f5f9;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.contenedor-exito {
+    width: 92%;
+    max-width: 900px;
+    margin: 120px auto 60px;
+}
+
+.mensaje-exito {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.check-exito {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 18px;
+    background: #1f2764;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(31,39,100,.25);
+}
+
+.mensaje-exito h1 {
+    margin: 0 0 10px;
+    color: #1f2764;
+    font-size: 32px;
+}
+
+.mensaje-exito p {
+    margin: 0 0 8px;
+    color: #555;
+    font-size: 17px;
+}
+
+.texto-reserva {
+    color: #888;
+    font-size: 14px;
+}
+
+.boleto {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.12);
+    border: 1px solid #e1e1e1;
+}
+
+.boleto-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.marca-boleto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.marca-boleto img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.marca-boleto h2 {
+    margin: 0 0 5px;
+    color: #1f2764;
+    font-size: 21px;
+}
+
+.marca-boleto span {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.reserva {
+    text-align: right;
+}
+
+.reserva span {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.reserva strong {
+    color: #1f2764;
+    font-size: 20px;
+}
+
+.linea {
+    border-top: 1px dashed #bbb;
+    margin: 25px 0;
+}
+
+.ruta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.aeropuerto {
+    text-align: center;
+}
+
+.aeropuerto span {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.aeropuerto strong {
+    color: #1f2764;
+    font-size: 38px;
+}
+
+.avion {
+    color: #e30613;
+    font-size: 30px;
+}
+
+.datos-vuelo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dato span {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-bottom: 7px;
+}
+
+.dato strong {
+    color: #333;
+    font-size: 15px;
+}
+
+.boleto-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boleto-final span {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.boleto-final strong {
+    font-size: 20px;
+    color: #1f2764;
+}
+
+.boleto-final .estado {
+    color: #16833b;
+}
+
+.codigo-barras {
+    height: 65px;
+    margin: 25px auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3px;
+}
+
+.barra {
+    width: 4px;
+    background: #111;
+}
+
+.barra:nth-child(2) {
+    width: 2px;
+}
+
+.barra:nth-child(4) {
+    width: 6px;
+}
+
+.barra:nth-child(6) {
+    width: 2px;
+}
+
+.barra:nth-child(8) {
+    width: 7px;
+}
+
+.barra:nth-child(10) {
+    width: 3px;
+}
+
+.barra:nth-child(12) {
+    width: 6px;
+}
+
+.aviso-boleto {
+    text-align: center;
+    color: #999;
+    font-size: 10px;
+    margin: 0;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.acciones button,
+.acciones a {
+    border: none;
+    background: #1f2764;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.acciones button:hover,
+.acciones a:hover {
+    background: #e30613;
+}
+
+
+/* ================= MENU HAMBURGUESA ================= */
+
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    width: 32px;
+    height: 32px;
+    z-index: 1001;
+}
+
+.menu-hamburguesa span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
+    border-radius: 3px;
+}
+
+
+/* ================= MENU MOVIL ================= */
+
+@media (max-width: 600px) {
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .contenedor-exito {
+        width: 94%;
+        margin-top: 110px;
+    }
+
+    .mensaje-exito h1 {
+        font-size: 25px;
+    }
+
+    .boleto {
+        padding: 20px;
+    }
+
+    .boleto-superior {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reserva {
+        text-align: left;
+    }
+
+    .ruta {
+        gap: 25px;
+    }
+
+    .aeropuerto strong {
+        font-size: 30px;
+    }
+
+    .datos-vuelo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .acciones button,
+    .acciones a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .header,
+    .acciones,
+    .mensaje-exito,
+    .aviso-boleto {
+        display: none;
+    }
+
+    .contenedor-exito {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .boleto {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+}

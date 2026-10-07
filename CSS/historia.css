@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= MENU HAMBURGUESA ================= */
+
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+}
+
+/* ================= PORTADA ================= */
+
+.historia-portada {
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.historia-portada > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portada-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.portada-contenido {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.portada-contenido h1 {
+    font-size: 58px;
+    margin-bottom: 18px;
+}
+
+.portada-contenido p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* ================= INTRO ================= */
+
+.historia-intro {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.historia-intro-contenido {
+    max-width: 850px;
+    margin: auto;
+}
+
+.historia-intro span,
+.section-title span,
+.momentos span {
+    color: #1f2764;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.historia-intro h2,
+.section-title h2 {
+    color: #1f2764;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.historia-intro p,
+.section-title p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ================= TITULOS ================= */
+
+.section-title {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 55px;
+}
+
+/* ================= TIMELINE ================= */
+
+.linea-tiempo {
+    background: #f5f6fa;
+    padding: 90px 8%;
+}
+
+.timeline {
+    max-width: 950px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #1f2764;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 50px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-year {
+    width: 75px;
+    height: 75px;
+    background: #1f2764;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: -37px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: -37px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.timeline-content h3 {
+    color: #1f2764;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ================= EVOLUCION ================= */
+
+.evolucion {
+    padding: 90px 7%;
+}
+
+.aviones-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.avion-card {
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.avion-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.avion-card:hover img {
+    transform: scale(1.05);
+}
+
+.avion-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.8));
+}
+
+.avion-info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: white;
+}
+
+.avion-info span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.avion-info h3 {
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.avion-info p {
+    line-height: 1.5;
+}
+
+/* ================= MOMENTOS ================= */
+
+.momentos {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background: #1f2764;
+    color: white;
+}
+
+.momentos-contenido {
+    max-width: 750px;
+}
+
+.momentos span {
+    color: #9adfff;
+}
+
+.momentos h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.momentos p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= FILOSOFIA ================= */
+
+.filosofia {
+    padding: 90px 7%;
+}
+
+.filosofia-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.filosofia-card {
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 12px;
+    background: #f5f6fa;
+}
+
+.filosofia-icono {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.filosofia-card h3 {
+    color: #1f2764;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.filosofia-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ================= MISION ================= */
+
+.mision {
+    padding: 90px 8%;
+    background: #f5f6fa;
+    text-align: center;
+}
+
+.mision-contenido {
+    max-width: 850px;
+    margin: auto;
+}
+
+.mision h2 {
+    color: #1f2764;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.mision p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= FINAL ================= */
+
+.historia-final {
+    padding: 100px 8%;
+    text-align: center;
+    background: #1f2764;
+    color: white;
+}
+
+.historia-final-contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.historia-final h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.historia-final p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-historia {
+    display: inline-block;
+    padding: 14px 28px;
+    background: white;
+    color: #1f2764;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-historia:hover {
+    background: #9adfff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+    .aviones-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .aviones-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filosofia-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    /* ================= MENU HAMBURGUESA ================= */
+
+    header {
+        height: 75px;
+        min-height: 75px;
+        flex-direction: row;
+        padding: 0 20px;
+        gap: 0;
+    }
+
+    .logo {
+        margin-left: -5px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #1f2764;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0 15px;
+        box-shadow: 0 5px 12px rgba(0,0,0,.20);
+    }
+
+    .navbar.menu-abierto {
+        display: flex;
+    }
+
+    .navbar > a,
+    .navbar .usuario-nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar > a {
+        padding: 15px 25px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .navbar > a:hover {
+        background: rgba(255,255,255,.08);
+        color: white;
+    }
+
+    .navbar .usuario-nav {
+        padding: 0;
+    }
+
+    .navbar .usuario-nav > a,
+    .navbar .usuario-nav > .usuario-activo {
+        display: flex;
+        width: 100%;
+        padding: 15px 25px;
+        margin: 0;
+    }
+
+    .navbar .icono-nav {
+        justify-content: flex-start;
+    }
+
+    .navbar .carrito-icono {
+        padding-left: 25px;
+    }
+
+    .portada-contenido h1 {
+        font-size: 40px;
+    }
+
+    .portada-contenido p {
+        font-size: 17px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        left: -17px;
+        right: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}

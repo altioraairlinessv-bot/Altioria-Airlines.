@@ -1,0 +1,392 @@
+/* =========================
+   CONFIGURACION GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#222;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header{
+    background:#1f2764;
+    width:100%;
+}
+
+.menu{
+    width:90%;
+    margin:auto;
+    min-height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.menu h1{
+    color:white;
+    font-size:28px;
+}
+
+.menu ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.menu ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.menu ul li a:hover{
+    color:#4da3ff;
+}
+
+
+/* =========================
+   PORTADA DEL DESTINO
+========================= */
+
+.destino-portada{
+    width:90%;
+    margin:50px auto;
+    position:relative;
+}
+
+.destino-portada img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    display:block;
+    border-radius:18px;
+}
+
+.destino-titulo{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:60px 40px 35px;
+    color:white;
+    border-radius:18px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.80)
+    );
+}
+
+.destino-titulo h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.destino-titulo p{
+    font-size:20px;
+}
+
+
+/* =========================
+   INFORMACION DEL DESTINO
+========================= */
+
+.informacion-destino{
+    width:90%;
+    margin:70px auto;
+    text-align:center;
+}
+
+.informacion-destino h2{
+    color:#0b5ed7;
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+.informacion-destino p{
+    max-width:900px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   LUGARES TURISTICOS
+========================= */
+
+.lugares{
+    width:90%;
+    margin:70px auto;
+    text-align:center;
+}
+
+.lugares h2{
+    color:#0b5ed7;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.lugares-contenedor{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.lugar{
+    flex:1;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #ddd;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.lugar img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.lugar h3{
+    color:#0b5ed7;
+    font-size:25px;
+    margin:20px 15px 10px;
+}
+
+.lugar p{
+    color:#666;
+    padding:0 20px 25px;
+    line-height:1.5;
+}
+
+
+/* =========================
+   INFORMACION DEL VIAJE
+========================= */
+
+.datos-viaje{
+    width:90%;
+    margin:70px auto;
+    text-align:center;
+}
+
+.datos-viaje h2{
+    color:#0b5ed7;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.datos-contenedor{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.dato{
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #ddd;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.dato h3{
+    color:#0b5ed7;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.dato p{
+    color:#666;
+    font-size:16px;
+}
+
+
+/* =========================
+   PRECIO DEL VIAJE
+========================= */
+
+.precio-viaje{
+    width:80%;
+    max-width:800px;
+    margin:80px auto;
+    padding:50px;
+    text-align:center;
+
+    background:white;
+    border-radius:20px;
+    border:1px solid #ddd;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.precio-viaje h2{
+    color:#0b5ed7;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.precio-viaje .desde{
+    color:#666;
+    font-size:18px;
+}
+
+.precio-viaje h1{
+    font-size:65px;
+    color:#222;
+    margin:15px 0;
+}
+
+.precio-viaje p{
+    color:#666;
+    font-size:16px;
+    line-height:1.6;
+}
+
+
+/* =========================
+   BOTON COTIZAR
+========================= */
+
+.btn-cotizar{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+
+    background:#0b5ed7;
+    color:white;
+
+    text-decoration:none;
+    border-radius:10px;
+
+    font-size:16px;
+    font-weight:bold;
+}
+
+.btn-cotizar:hover{
+    background:#084298;
+}
+
+
+/* =========================
+   PIE DE PAGINA
+========================= */
+
+footer{
+    background:#071b41;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:80px;
+}
+
+footer p{
+    font-size:15px;
+}
+
+
+/* =========================
+   ADAPTACION PARA TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .menu{
+        flex-direction:column;
+        padding:20px 0;
+        gap:20px;
+    }
+
+    .menu ul{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .destino-portada{
+        width:94%;
+    }
+
+    .destino-portada img{
+        height:350px;
+    }
+
+    .destino-titulo h2{
+        font-size:35px;
+    }
+
+    .lugares-contenedor{
+        flex-direction:column;
+    }
+
+    .datos-contenedor{
+        flex-direction:column;
+    }
+
+    .precio-viaje{
+        width:90%;
+        padding:40px 25px;
+    }
+}
+
+
+/* =========================
+   ADAPTACION PARA CELULAR
+========================= */
+
+@media(max-width:600px){
+
+    .destino-portada img{
+        height:280px;
+    }
+
+    .destino-titulo{
+        padding:45px 20px 25px;
+    }
+
+    .destino-titulo h2{
+        font-size:28px;
+    }
+
+    .destino-titulo p{
+        font-size:16px;
+    }
+
+    .informacion-destino h2,
+    .lugares h2,
+    .datos-viaje h2,
+    .precio-viaje h2{
+        font-size:30px;
+    }
+
+    .precio-viaje h1{
+        font-size:50px;
+    }
+}
+
+header{
+    background:#1f2764;
+    width:100%;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:1000;
+}

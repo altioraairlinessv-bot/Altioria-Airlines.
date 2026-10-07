@@ -1,0 +1,299 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #eef4ff;
+}
+
+header{
+    background: linear-gradient(to right, #20275C, #2F80ED);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 18px;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta{
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    transition: 0.3s;
+}
+
+.tarjeta:hover{
+    transform: translateY(-6px);
+}
+
+.tarjeta h2{
+    color: #2F80ED;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.tarjeta p{
+    text-align: justify;
+    color: #444;
+    line-height: 1.8;
+}
+
+.tarjeta ul{
+    margin-left: 20px;
+    color: #444;
+    line-height: 1.9;
+}
+
+.tarjeta li{
+    margin-bottom: 8px;
+}
+
+.boton{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.boton a{
+    display: inline-block;
+    text-decoration: none;
+    background: #20275C;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.boton a:hover{
+    background: #2F80ED;
+}
+
+@media(max-width:900px){
+
+    .contenedor{
+        grid-template-columns: 1fr;
+    }
+
+    header h1{
+        font-size: 30px;
+    }
+
+    header p{
+        font-size: 16px;
+    }
+
+    .tarjeta h2{
+        font-size: 24px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #d8dee6;
+}
+
+.cotizacion{
+    width:90%;
+    margin:70px auto;
+    background:#fff;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.titulo-cotizacion{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.titulo-cotizacion h2{
+    color:#0b5ed7;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.titulo-cotizacion p{
+    color:#666;
+    font-size:17px;
+}
+
+.form-cotizacion{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.grupo{
+    display:flex;
+    flex-direction:column;
+}
+
+.grupo label{
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#333;
+}
+
+.grupo input,
+.grupo select{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.grupo input:focus,
+.grupo select:focus{
+    outline:none;
+    border-color:#0b5ed7;
+    box-shadow:0 0 6px rgba(11,94,215,.3);
+}
+
+.btn-cotizar{
+    grid-column:1/4;
+    padding:18px;
+    background:#0b5ed7;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-cotizar:hover{
+    background:#084298;
+}
+
+.planes{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.planes h2{
+    color:#0b5ed7;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.planes p{
+    color:#666;
+    margin-bottom:45px;
+}
+
+.planes-contenedor{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.plan{
+    flex:1;
+    min-width:280px;
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.plan:hover{
+    transform:translateY(-8px);
+}
+
+.plan h3{
+    color:#0b5ed7;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.plan h1{
+    font-size:48px;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.plan p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.plan ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:30px;
+}
+
+.plan ul li{
+    margin:12px 0;
+    color:#444;
+}
+
+.plan a{
+    display:block;
+    text-decoration:none;
+    background:#0b5ed7;
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.plan a:hover{
+    background:#084298;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.form-cotizacion{
+    grid-template-columns:1fr;
+}
+
+.btn-cotizar{
+    grid-column:1;
+}
+
+.planes-contenedor{
+    flex-direction:column;
+}
+
+.plan{
+    width:100%;
+}
+
+}

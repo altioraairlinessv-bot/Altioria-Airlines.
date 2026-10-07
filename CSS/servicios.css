@@ -1,0 +1,436 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= MENU HAMBURGUESA ================= */
+
+.menu-hamburguesa {
+    display: none;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.menu-hamburguesa span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+
+/* ================= TITULO ================= */
+
+.pagina-titulo {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.pagina-titulo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.pagina-titulo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 39, 92, 0.55);
+    z-index: 2;
+}
+
+.titulo-contenido {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 850px;
+    padding: 0 25px;
+}
+
+.pagina-titulo h1 {
+    color: #ffffff;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.pagina-titulo p {
+    color: #eeeeee;
+    font-size: 18px;
+}
+
+
+/* ================= TITULOS ================= */
+
+.section-title {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-title h2 {
+    color: #20275C;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ================= SERVICIOS ================= */
+
+.servicios-pagina {
+    width: 100%;
+    padding: 80px 6%;
+    background-color: #ffffff;
+}
+
+.servicios-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicio-grande {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.servicio-grande:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.servicio-grande-imagen {
+    width: 100%;
+    height: 210px;
+    background-color: #dfe2ea;
+    overflow: hidden;
+}
+
+.servicio-grande-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.servicio-grande:hover .servicio-grande-imagen img {
+    transform: scale(1.05);
+}
+
+.servicio-grande-contenido {
+    padding: 25px;
+}
+
+.servicio-icono {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #20275C;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.servicio-grande-contenido h3 {
+    color: #20275C;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.servicio-grande-contenido p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.servicio-grande-contenido a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 2px solid #20275C;
+    border-radius: 5px;
+    color: #20275C;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.servicio-grande-contenido a:hover {
+    background-color: #20275C;
+    color: #ffffff;
+}
+
+
+/* ================= CORPORATIVO ================= */
+
+.servicio-corporativo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 6%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.corporativo-imagen {
+    width: 50%;
+    height: 330px;
+    background-color: #dfe2ea;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.corporativo-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.corporativo-contenido {
+    width: 50%;
+}
+
+.corporativo-contenido h2 {
+    color: #20275C;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.corporativo-contenido p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.corporativo-contenido a {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #20275C;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.corporativo-contenido a:hover {
+    background-color: #151a40;
+}
+
+
+/* ================= CTA ================= */
+
+.nosotros-cta {
+    width: 100%;
+    min-height: 280px;
+    padding: 60px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #20275C;
+}
+
+.nosotros-cta h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.nosotros-cta p {
+    color: #eeeeee;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.nosotros-cta a {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: #d71920;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nosotros-cta a:hover {
+    background-color: #b51218;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicio-corporativo {
+        flex-direction: column;
+    }
+
+    .corporativo-imagen,
+    .corporativo-contenido {
+        width: 100%;
+    }
+
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 600px) {
+
+    /* ================= MENU HAMBURGUESA ================= */
+
+    .menu-hamburguesa {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1f2764;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        gap: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .navbar.menu-activo {
+        display: flex;
+    }
+
+    .navbar > a {
+        width: 100%;
+        text-align: left;
+        padding: 12px 35px;
+    }
+
+    .usuario-nav {
+        width: 100%;
+        text-align: left;
+    }
+
+    .usuario-nav a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 12px 35px;
+    }
+
+    .carrito-icono {
+        width: 100%;
+        text-align: left;
+        padding: 12px 35px;
+    }
+
+
+    /* ================= CONTENIDO ================= */
+
+    .pagina-titulo {
+        min-height: 430px;
+    }
+
+    .pagina-titulo h1 {
+        font-size: 36px;
+    }
+
+    .pagina-titulo p {
+        font-size: 16px;
+    }
+
+    .servicios-pagina {
+        padding: 60px 25px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicio-corporativo {
+        padding: 55px 25px;
+    }
+
+    .corporativo-imagen {
+        height: 260px;
+    }
+
+    .corporativo-contenido h2 {
+        font-size: 30px;
+    }
+
+}

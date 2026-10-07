@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion - Altioria Airlines</title>
+    <link rel="icon" href="../IMG/logo empresa de software.svg">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+
+    <!-- ================= BOTON REGRESAR ================= -->
+
+    <a href="../index.html" class="btn-regresar">
+        ← Regresar
+    </a>
+
+
+    <!-- ================= FONDO ================= -->
+
+    <div class="fondo">
+
+        <img
+            src="../IMG/imagen-sesion.jpeg"
+            alt="Fondo de Altioria Airlines"
+        >
+
+    </div>
+
+
+    <!-- ================= INICIO DE SESION ================= -->
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>
+                Iniciar sesion
+            </h1>
+
+            <p>
+                Ingresa a tu cuenta de Altioria Airlines
+            </p>
+
+            <form id="form-login">
+
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo electronico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="Ingresa tu correo"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Ingresa tu contraseña"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Iniciar sesion
+                </button>
+
+            </form>
+
+            <p class="registro">
+                ¿No tienes una cuenta?
+                <a href="registro.html">
+                    Registrate
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="../JS/login.js"></script>
+
+</body>
+
+</html>

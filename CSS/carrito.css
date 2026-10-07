@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #333;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+    padding: 0 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #20275c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e30613;
+}
+
+/* ================= CARRITO ================= */
+
+.carrito-icono {
+    position: relative;
+    font-size: 22px !important;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    background: #e30613;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= CONTENEDOR ================= */
+
+.carrito-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.carrito-container h1 {
+    color: #20275c;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* ================= VUELOS ================= */
+
+#carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vuelo {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vuelo-info h3 {
+    color: #20275c;
+    margin-bottom: 10px;
+}
+
+.vuelo-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.precio {
+    text-align: right;
+}
+
+.precio strong {
+    display: block;
+    color: #20275c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.eliminar {
+    border: none;
+    background: #e30613;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.eliminar:hover {
+    background: #b0000b;
+}
+
+/* ================= RESUMEN ================= */
+
+.resumen {
+    background: white;
+    width: 400px;
+    max-width: 100%;
+    margin: 35px 0 0 auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.resumen h2 {
+    color: #20275c;
+    margin-bottom: 20px;
+}
+
+.linea,
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.total {
+    font-size: 22px;
+    font-weight: bold;
+    color: #20275c;
+}
+
+.resumen hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+#continuar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #20275c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#continuar:hover {
+    background: #e30613;
+}
+
+/* ================= CARRITO VACIO ================= */
+
+.carrito-vacio {
+    background: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carrito-vacio h2 {
+    color: #20275c;
+    margin-bottom: 10px;
+}
+
+.carrito-vacio p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.carrito-vacio a {
+    display: inline-block;
+    background: #20275c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .vuelo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .precio {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 4%;
+    }
+
+    .navbar {
+        gap: 8px;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .navbar .carrito-icono {
+        display: block;
+    }
+
+    .carrito-container {
+        width: 92%;
+        margin-top: 30px;
+    }
+
+    .carrito-container h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ALT Coin | Altioria Airlines</title>
+<link rel="icon" href="../IMG/logo empresa de software.svg">
+    <link rel="stylesheet" href="../CSS/altcoin.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <img
+                src="../IMG/logo empresa de software.svg" alt="Altioria Airlines">
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="servicios.html">
+                Servicios
+            </a>
+
+            <a href="destinos.html">
+                Destinos
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <main class="altcoin-container">
+
+
+        <section class="altcoin-panel">
+
+
+            <h1>
+                Pago con ALT Coin
+            </h1>
+
+
+            <p class="descripcion">
+
+                Escanea el codigo QR para continuar
+                con tu pago.
+
+            </p>
+
+
+
+            <!-- ================= QR ================= -->
+
+            <div class="qr-container">
+
+                <div class="qr">
+
+                    <div class="qr-text">
+
+                        ALT
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="qr-info">
+
+                Escanea este codigo para abrir
+                el simulador de pago ALT Coin.
+
+            </p>
+
+
+
+            <!-- ================= INFORMACION ================= -->
+
+            <div class="datos-reserva">
+
+
+                <h2>
+                    Datos de la reserva
+                </h2>
+
+
+                <div class="dato">
+
+                    <span>
+                        Reserva
+                    </span>
+
+                    <strong id="codigoReserva">
+                        ALT-0000
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        Vuelo
+                    </span>
+
+                    <strong id="vuelo">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        Ruta
+                    </span>
+
+                    <strong id="ruta">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        Fecha de salida
+                    </span>
+
+                    <strong id="salida">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        Fecha de regreso
+                    </span>
+
+                    <strong id="regreso">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        Pasajeros
+                    </span>
+
+                    <strong id="pasajeros">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= ALT COIN ================= -->
+
+            <div class="altcoin-total">
+
+
+                <span>
+                    Importe a pagar
+                </span>
+
+
+                <strong id="totalALT">
+                    0.00 ALT
+                </strong>
+
+
+                <small>
+                    1 USD = 1 ALT (simulacion)
+                </small>
+
+
+            </div>
+
+
+
+            <!-- ================= BOTON ================= -->
+
+            <button
+                id="confirmarPago"
+                class="boton-pago">
+
+                Confirmar pago
+
+            </button>
+
+
+
+            <!-- ================= PROCESANDO ================= -->
+
+            <div
+                id="procesando"
+                class="procesando">
+
+
+                <div class="spinner"></div>
+
+
+                <h2>
+                    Procesando pago...
+                </h2>
+
+
+                <p>
+                    Verificando la transaccion.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ================= COMPLETADO ================= -->
+
+            <div
+                id="completado"
+                class="completado">
+
+
+                <div class="check">
+
+                    ✓
+
+                </div>
+
+
+                <h2>
+                    Pago completado con exito
+                </h2>
+
+
+                <p>
+                    Tu reserva ha sido confirmada.
+                </p>
+
+
+                <button
+                    id="verBoleto"
+                    class="boton-boleto">
+
+                    Ver boleto
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="../JS/altcoin.js"></script>
+
+</body>
+
+</html>

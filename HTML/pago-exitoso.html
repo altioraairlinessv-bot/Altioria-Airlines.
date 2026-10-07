@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pago realizado - Altioria Airlines</title>
+
+    <link rel="icon" href="../IMG/logo empresa de software.svg">
+
+    <link rel="stylesheet" href="../CSS/style1.css">
+    <link rel="stylesheet" href="../CSS/pago-exitoso.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+
+        <div class="logo">
+
+            <img
+                src="../IMG/logo empresa de software.svg"
+                alt="Altioria Airlines"
+            >
+
+        </div>
+
+
+        <!-- ================= MENU HAMBURGUESA ================= -->
+
+        <button
+            class="menu-hamburguesa"
+            id="menu-hamburguesa"
+            type="button"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="historia.html">
+                Historia
+            </a>
+
+            <a href="servicios.html">
+                Servicios
+            </a>
+
+            <a href="destinos.html">
+                Destinos
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+            <div class="usuario-nav" id="usuario-nav">
+
+                <a
+                    href="login.html"
+                    class="inicio-de-sesion"
+                >
+                    Iniciar sesion
+                </a>
+
+            </div>
+
+            <a
+                href="carrito.html"
+                class="icono-nav carrito-icono"
+            >
+
+                🛒
+
+                <span id="contador-carrito">
+                    0
+                </span>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="contenedor-exito">
+
+
+        <!-- ================= MENSAJE ================= -->
+
+        <section class="mensaje-exito">
+
+            <div class="check-exito">
+                ✓
+            </div>
+
+            <h1>
+                Pago realizado con exito
+            </h1>
+
+            <p>
+                Tu reserva ha sido confirmada correctamente.
+            </p>
+
+            <span class="texto-reserva">
+                Guarda los datos de tu boleto para tu viaje.
+            </span>
+
+        </section>
+
+
+        <!-- ================= BOLETO ================= -->
+
+        <section class="boleto" id="boleto">
+
+
+            <!-- ================= PARTE SUPERIOR ================= -->
+
+            <div class="boleto-superior">
+
+                <div class="marca-boleto">
+
+                    <img
+                        src="../IMG/LOGO 23.jpeg"
+                        alt="Altioria Airlines"
+                    >
+
+                    <div>
+
+                        <h2>
+                            ALTIORIA AIRLINES
+                        </h2>
+
+                        <span>
+                            BOLETO ELECTRONICO
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="reserva">
+
+                    <span>
+                        CODIGO DE RESERVA
+                    </span>
+
+                    <strong id="codigo-reserva">
+                        ALT000000
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="linea"></div>
+
+
+            <!-- ================= PASAJERO ================= -->
+
+            <div class="datos-pasajero">
+
+                <div class="dato">
+
+                    <span>
+                        PASAJERO
+                    </span>
+
+                    <strong id="boleto-nombre">
+                        Pendiente
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="linea"></div>
+
+
+            <!-- ================= RUTA ================= -->
+
+            <div class="ruta">
+
+                <div class="aeropuerto">
+
+                    <span>
+                        ORIGEN
+                    </span>
+
+                    <strong id="boleto-origen">
+                        SAL
+                    </strong>
+
+                </div>
+
+
+                <div class="avion">
+                    ✈
+                </div>
+
+
+                <div class="aeropuerto">
+
+                    <span>
+                        DESTINO
+                    </span>
+
+                    <strong id="boleto-destino">
+                        MAD
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="linea"></div>
+
+
+            <!-- ================= DATOS DEL VUELO ================= -->
+
+            <div class="datos-vuelo">
+
+
+                <div class="dato">
+
+                    <span>
+                        VUELO
+                    </span>
+
+                    <strong id="boleto-vuelo">
+                        ALT 000
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        HORA DE SALIDA
+                    </span>
+
+                    <strong id="boleto-salida">
+                        --:--
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        REGRESO
+                    </span>
+
+                    <strong id="boleto-regreso">
+                        No aplica
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        PASAJEROS
+                    </span>
+
+                    <strong id="boleto-pasajeros">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        ASIENTO
+                    </span>
+
+                    <strong id="boleto-asiento">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        CLASE
+                    </span>
+
+                    <strong id="boleto-clase">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="linea"></div>
+
+
+            <!-- ================= INFORMACION DEL PAGO ================= -->
+
+            <div class="datos-pago">
+
+
+                <div class="dato">
+
+                    <span>
+                        PRECIO DEL VUELO
+                    </span>
+
+                    <strong id="boleto-precio-vuelo">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        ASIENTOS
+                    </span>
+
+                    <strong id="boleto-precio-asientos">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        METODO DE PAGO
+                    </span>
+
+                    <strong id="boleto-metodo-pago">
+                        Tarjeta
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="linea"></div>
+
+
+            <!-- ================= TOTAL ================= -->
+
+            <div class="boleto-final">
+
+                <div>
+
+                    <span>
+                        ESTADO
+                    </span>
+
+                    <strong class="estado">
+                        PAGADO
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong id="boleto-precio">
+                        $0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CODIGO DE BARRAS ================= -->
+
+            <div class="codigo-barras">
+
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+
+            </div>
+
+
+            <p class="aviso-boleto">
+
+                Este boleto es una representacion ficticia para el proyecto
+                de Altioria Airlines.
+
+            </p>
+
+        </section>
+
+
+        <!-- ================= ACCIONES ================= -->
+
+        <div class="acciones">
+
+            <button id="imprimir-boleto">
+                Imprimir boleto
+            </button>
+
+            <a href="../index.html">
+                Volver al inicio
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="../JS/main.js"></script>
+
+
+    <script>
+
+        // ========================================
+        // RECUPERAR RESERVA
+        // ========================================
+
+        const reservaGuardada =
+            localStorage.getItem("reservaAltioria");
+
+
+        if (reservaGuardada) {
+
+            const reserva =
+                JSON.parse(reservaGuardada);
+
+
+            // ========================================
+            // DATOS PRINCIPALES
+            // ========================================
+
+            document.getElementById(
+                "codigo-reserva"
+            ).textContent =
+                reserva.codigoReserva || "ALT000000";
+
+
+            document.getElementById(
+                "boleto-nombre"
+            ).textContent =
+                reserva.nombre || "Pendiente";
+
+
+            document.getElementById(
+                "boleto-vuelo"
+            ).textContent =
+                reserva.numeroVuelo ||
+                reserva.vuelo ||
+                "ALT 000";
+
+
+            document.getElementById(
+                "boleto-origen"
+            ).textContent =
+                reserva.origen || "---";
+
+
+            document.getElementById(
+                "boleto-destino"
+            ).textContent =
+                reserva.destino || "---";
+
+
+            document.getElementById(
+                "boleto-salida"
+            ).textContent =
+                reserva.salida || "--:--";
+
+
+            document.getElementById(
+                "boleto-regreso"
+            ).textContent =
+                reserva.regreso || "No aplica";
+
+
+            document.getElementById(
+                "boleto-pasajeros"
+            ).textContent =
+                reserva.pasajeros || "1";
+
+
+            // ========================================
+            // ASIENTOS
+            // ========================================
+
+            const elementoAsiento =
+                document.getElementById(
+                    "boleto-asiento"
+                );
+
+
+            if (
+                reserva.asientos &&
+                reserva.asientos.length > 0
+            ) {
+
+                elementoAsiento.innerHTML =
+                    reserva.asientos
+                    .map(asiento => {
+
+                        const codigo =
+                            asiento.codigo || "-";
+
+                        const clase =
+                            asiento.clase
+                            ? asiento.clase
+                                .charAt(0)
+                                .toUpperCase()
+                                +
+                                asiento.clase
+                                .slice(1)
+                            : "Economica";
+
+                        const precio =
+                            Number(
+                                asiento.precio || 0
+                            ).toFixed(2);
+
+                        return (
+                            codigo +
+                            " — " +
+                            clase +
+                            " — $" +
+                            precio
+                        );
+
+                    })
+                    .join("<br>");
+
+            } else {
+
+                elementoAsiento.textContent =
+                    "-";
+
+            }
+
+
+            // ========================================
+            // CLASE
+            // ========================================
+
+            document.getElementById(
+                "boleto-clase"
+            ).textContent =
+                reserva.clases || "-";
+
+
+            // ========================================
+            // PRECIOS
+            // ========================================
+
+            document.getElementById(
+                "boleto-precio-vuelo"
+            ).textContent =
+
+                "$" +
+                Number(
+                    reserva.precioVuelo || 0
+                ).toFixed(2);
+
+
+            document.getElementById(
+                "boleto-precio-asientos"
+            ).textContent =
+
+                "$" +
+                Number(
+                    reserva.precioAsientos || 0
+                ).toFixed(2);
+
+
+            document.getElementById(
+                "boleto-metodo-pago"
+            ).textContent =
+                reserva.metodoPago || "Tarjeta";
+
+
+            // ========================================
+            // TOTAL
+            // ========================================
+
+            document.getElementById(
+                "boleto-precio"
+            ).textContent =
+
+                "$" +
+                Number(
+                    reserva.total || 0
+                ).toFixed(2);
+
+        }
+
+
+        // ========================================
+        // IMPRIMIR BOLETO
+        // ========================================
+
+        document
+            .getElementById("imprimir-boleto")
+            .addEventListener(
+                "click",
+                function() {
+
+                    window.print();
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>

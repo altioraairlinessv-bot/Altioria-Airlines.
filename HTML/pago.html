@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pago | Altiora Airlines</title>
+
+<link rel="icon" href="../IMG/logo empresa de software.svg">
+
+<link rel="stylesheet" href="../CSS/pago.css">
+
+</head><body><!-- ================= HEADER ================= -->
+
+<header class="header" id="header">
+
+
+    <div class="logo">
+
+        <img src="../IMG/logo empresa de software.svg"
+             alt="Altioria Airlines">
+
+    </div>
+
+
+    <!-- ================= MENU HAMBURGUESA ================= -->
+
+    <button
+        class="menu-hamburguesa"
+        id="menu-hamburguesa"
+        type="button"
+        aria-label="Abrir menu"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <nav class="navbar">
+
+        <a href="../index.html">
+            Inicio
+        </a>
+
+        <a href="./nosotros.html">
+            Nosotros
+        </a>
+
+        <a href="./servicios.html">
+            Servicios
+        </a>
+
+        <a href="./destinos.html">
+            Destinos
+        </a>
+
+        <a href="./contacto.html">
+            Contacto
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- ================= MENSAJE DE PAGO ================= -->
+
+<div id="mensajePago" class="mensaje-pago">
+
+    <span>✓</span>
+
+    <div>
+
+        <strong>
+            ¡Pago completado!
+        </strong>
+
+        <p>
+            Tu reserva ha sido confirmada correctamente.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= CONTENIDO ================= -->
+
+<main class="contenedor">
+
+
+    <!-- ================= FORMULARIO ================= -->
+
+    <section class="formulario">
+
+
+        <h2>
+            Información del pasajero
+        </h2>
+
+
+        <div class="grupo">
+
+            <label for="nombre">
+                Nombre completo
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Ej. Juan Pérez"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="fila-formulario">
+
+
+            <div class="grupo">
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="correo@ejemplo.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="grupo">
+
+                <label for="telefono">
+                    Teléfono
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    placeholder="0000-0000"
+                    required
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <h2 class="titulo-pago">
+            Información de pago
+        </h2>
+
+
+
+        <!-- ================= TARJETA ================= -->
+
+        <div class="tarjeta">
+
+
+            <div class="tarjeta-arriba">
+
+                <span>
+                    ALTIORA AIRLINES
+                </span>
+
+                <span>
+                    VISA
+                </span>
+
+            </div>
+
+
+            <div class="chip">
+                ▰
+            </div>
+
+
+            <div id="numeroTarjetaVista">
+                •••• •••• •••• ••••
+            </div>
+
+
+            <div class="tarjeta-abajo">
+
+
+                <span>
+
+                    <small>
+                        TITULAR
+                    </small>
+
+                    <br>
+
+                    <b id="titularVista">
+                        NOMBRE DEL TITULAR
+                    </b>
+
+                </span>
+
+
+                <span>
+
+                    <small>
+                        EXPIRA
+                    </small>
+
+                    <br>
+
+                    <b id="fechaVista">
+                        MM/AA
+                    </b>
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="grupo">
+
+            <label for="numeroTarjeta">
+                Número de tarjeta
+            </label>
+
+            <input
+                type="text"
+                id="numeroTarjeta"
+                maxlength="19"
+                placeholder="0000 0000 0000 0000"
+                required
+            >
+
+        </div>
+
+
+
+        <div class="fila-formulario">
+
+
+            <div class="grupo">
+
+                <label for="titular">
+                    Nombre en la tarjeta
+                </label>
+
+                <input
+                    type="text"
+                    id="titular"
+                    placeholder="Nombre del titular"
+                    required
+                >
+
+            </div>
+
+
+            <div class="grupo">
+
+                <label for="vencimiento">
+                    Vencimiento
+                </label>
+
+                <input
+                    type="text"
+                    id="vencimiento"
+                    maxlength="5"
+                    placeholder="MM/AA"
+                    required
+                >
+
+            </div>
+
+
+            <div class="grupo">
+
+                <label for="cvv">
+                    CVV
+                </label>
+
+                <input
+                    type="password"
+                    id="cvv"
+                    maxlength="4"
+                    placeholder="000"
+                    required
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <button id="pagar">
+
+            CONFIRMAR Y PAGAR
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- ================= RESUMEN ================= -->
+
+    <aside class="resumen">
+
+
+        <h2>
+            Resumen de reserva
+        </h2>
+
+
+        <div class="reserva-dato">
+
+            <span>
+                Pasajero
+            </span>
+
+            <strong id="nombreResumen">
+                Pendiente
+            </strong>
+
+        </div>
+
+
+        <div class="reserva-dato">
+
+            <span>
+                Asientos
+            </span>
+
+            <strong id="asientosResumen">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="reserva-dato">
+
+            <span>
+                Cantidad
+            </span>
+
+            <strong id="cantidadResumen">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="reserva-dato">
+
+            <span>
+                Clases
+            </span>
+
+            <strong id="clasesResumen">
+                -
+            </strong>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="total">
+
+            <span>
+                Total a pagar
+            </span>
+
+            <strong id="totalResumen">
+                $0.00
+            </strong>
+
+        </div>
+
+
+        <div class="seguridad">
+
+            🔒 Pago seguro
+
+            <p>
+                Tus datos de pago están protegidos.
+            </p>
+
+        </div>
+
+
+        <!-- ================= ALT COIN ================= -->
+
+        <a href="altcoin.html" class="boton-altcoin">
+
+            Pagar con ALT Coin
+
+        </a>
+
+
+    </aside>
+
+
+</main>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="../JS/pago.js"></script>
+
+</body>
+
+</html>

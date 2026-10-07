@@ -1,0 +1,259 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #eef4ff;
+}
+
+header{
+    background: linear-gradient(to right, #20275C, #2F80ED);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 18px;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta{
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.tarjeta:hover{
+    transform: translateY(-6px);
+}
+
+.tarjeta h2{
+    color: #2F80ED;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p{
+    color: #444;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.tarjeta ul{
+    margin-left: 20px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.tarjeta li{
+    margin-bottom: 8px;
+}
+
+.boton{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.boton a{
+    display: inline-block;
+    background: #20275C;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.boton a:hover{
+    background: #2F80ED;
+}
+
+@media (max-width:900px){
+
+    .contenedor{
+        grid-template-columns: 1fr;
+    }
+
+    header h1{
+        font-size: 30px;
+    }
+
+    header p{
+        font-size: 16px;
+    }
+
+    .tarjeta h2{
+        font-size: 24px;
+    }
+}
+
+/* FORMULARIO */
+
+.cotizacion{
+    width:90%;
+    margin:70px auto;
+    background:#fff;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.titulo-cotizacion{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.titulo-cotizacion h2{
+    color:#0b5ed7;
+    font-size:38px;
+}
+
+.titulo-cotizacion p{
+    color:#666;
+}
+
+.form-cotizacion{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.grupo{
+    display:flex;
+    flex-direction:column;
+}
+
+.grupo label{
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.grupo input,
+.grupo select{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.btn-cotizar{
+    grid-column:1/4;
+    padding:18px;
+    background:#0b5ed7;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.btn-cotizar:hover{
+    background:#084298;
+}
+
+/* PLANES */
+
+.planes{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.planes h2{
+    color:#0b5ed7;
+    font-size:38px;
+}
+
+.planes p{
+    color:#666;
+    margin-bottom:40px;
+}
+
+.planes-contenedor{
+    display:flex;
+    gap:30px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.plan{
+    flex:1;
+    min-width:280px;
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.plan:hover{
+    transform:translateY(-8px);
+}
+
+.plan h3{
+    color:#0b5ed7;
+}
+
+.plan h1{
+    font-size:50px;
+    margin:20px 0;
+}
+
+.plan ul{
+    list-style:none;
+    padding:0;
+}
+
+.plan ul li{
+    margin:10px 0;
+}
+
+.plan a{
+    display:block;
+    margin-top:25px;
+    background:#0b5ed7;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+}
+
+.plan a:hover{
+    background:#084298;
+}
+
+@media(max-width:900px){
+
+.form-cotizacion{
+    grid-template-columns:1fr;
+}
+
+.btn-cotizar{
+    grid-column:1;
+}
+
+.planes-contenedor{
+    flex-direction:column;
+}
+
+}

@@ -1,0 +1,764 @@
+/* ================= GENERAL ================= */
+
+* {
+  
+  box-sizing: border-box;
+  
+  margin: 0;
+  
+  padding: 0;
+
+}
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: #f3f0e8;
+
+color: #172b4d;
+
+}
+
+a {
+
+text-decoration: none;
+
+}
+
+/* ================= HEADER ================= */
+
+.header {
+
+width: 100%;
+
+min-height: 75px;
+
+padding: 0 6%;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+background-color: transparent;
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+z-index: 1000;
+
+transition:
+    background-color 0.4s ease,
+    box-shadow 0.4s ease;
+
+}
+
+/* HEADER AL HACER SCROLL */
+
+.header.scrolled {
+
+background-color: #1f2764;
+
+box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+/* ================= LOGO ================= */
+
+.logo img {
+
+width: 80px;
+
+height: auto;
+
+display: block;
+
+margin-left: -80px;
+
+opacity: 0;
+
+transition: opacity 0.4s ease;
+
+}
+
+.header.scrolled .logo img {
+
+opacity: 1;
+
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+display: flex;
+
+align-items: center;
+
+gap: 30px;
+
+}
+
+.navbar a {
+
+color: #ffffff;
+
+font-size: 15px;
+
+font-weight: 500;
+
+transition: 0.3s;
+
+}
+
+.navbar a:hover {
+
+color: #d71920;
+
+}
+
+/* ================= MENU HAMBURGUESA ================= */
+
+.menu-hamburguesa {
+
+display: none;
+
+width: 42px;
+
+height: 42px;
+
+padding: 7px;
+
+border: none;
+
+background: transparent;
+
+cursor: pointer;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 5px;
+
+}
+
+.menu-hamburguesa span {
+
+display: block;
+
+width: 27px;
+
+height: 3px;
+
+border-radius: 3px;
+
+background: #ffffff;
+
+transition: 0.3s;
+
+}
+
+/* MENU ABIERTO */
+
+.menu-hamburguesa.activo span:nth-child(1) {
+
+transform: translateY(8px) rotate(45deg);
+
+}
+
+.menu-hamburguesa.activo span:nth-child(2) {
+
+opacity: 0;
+
+}
+
+.menu-hamburguesa.activo span:nth-child(3) {
+
+transform: translateY(-8px) rotate(-45deg);
+
+}
+
+/* ================= MENSAJE DE PAGO ================= */
+
+.mensaje-pago {
+
+display: none;
+
+width: 90%;
+
+max-width: 1100px;
+
+margin: 100px auto 0;
+
+padding: 18px 25px;
+
+background: #d9f5df;
+
+border: 1px solid #77c889;
+
+border-radius: 12px;
+
+color: #216b31;
+
+align-items: center;
+
+gap: 15px;
+
+}
+
+.mensaje-pago.mostrar {
+
+display: flex;
+
+}
+
+.mensaje-pago > span {
+
+font-size: 30px;
+
+font-weight: bold;
+
+}
+
+.mensaje-pago strong {
+
+font-size: 18px;
+
+}
+
+.mensaje-pago p {
+
+margin-top: 3px;
+
+}
+
+/* ================= CONTENEDOR ================= */
+
+.contenedor {
+
+width: 90%;
+
+max-width: 1100px;
+
+margin: 0 auto;
+
+padding-top: 110px;
+
+padding-bottom: 40px;
+
+display: grid;
+
+grid-template-columns: 1fr 330px;
+
+gap: 30px;
+
+align-items: start;
+
+}
+
+/* ================= FORMULARIO ================= */
+
+.formulario {
+
+background: white;
+
+padding: 35px;
+
+border-radius: 20px;
+
+box-shadow:
+    0 8px 25px rgba(0,0,0,0.10);
+
+}
+
+.formulario h2 {
+
+margin-bottom: 25px;
+
+}
+
+.titulo-pago {
+
+margin-top: 35px;
+
+}
+
+/* ================= GRUPOS ================= */
+
+.grupo {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 8px;
+
+margin-bottom: 20px;
+
+}
+
+.grupo label {
+
+font-size: 14px;
+
+font-weight: bold;
+
+}
+
+.grupo input {
+
+width: 100%;
+
+padding: 13px 15px;
+
+border:
+    1px solid #cbd1d9;
+
+border-radius: 9px;
+
+font-size: 15px;
+
+outline: none;
+
+}
+
+.grupo input:focus {
+
+border-color: #0b3d91;
+
+}
+
+/* ================= FILA ================= */
+
+.fila-formulario {
+
+display: grid;
+
+grid-template-columns: 2fr 1fr 1fr;
+
+gap: 15px;
+
+}
+
+/* ================= TARJETA ================= */
+
+.tarjeta {
+
+width: 100%;
+
+max-width: 450px;
+
+min-height: 230px;
+
+margin: 0 auto 30px;
+
+padding: 25px;
+
+border-radius: 18px;
+
+background: #0b3d91;
+
+color: white;
+
+box-shadow:
+    0 12px 25px rgba(0,0,0,0.2);
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+}
+
+.tarjeta-arriba {
+
+display: flex;
+
+justify-content: space-between;
+
+font-size: 13px;
+
+letter-spacing: 1px;
+
+}
+
+.chip {
+
+font-size: 35px;
+
+}
+
+#numeroTarjetaVista {
+
+font-size: 22px;
+
+letter-spacing: 3px;
+
+}
+
+.tarjeta-abajo {
+
+display: flex;
+
+justify-content: space-between;
+
+font-size: 12px;
+
+}
+
+.tarjeta-abajo small {
+
+opacity: 0.7;
+
+}
+
+.tarjeta-abajo b {
+
+font-size: 13px;
+
+}
+
+/* ================= BOTÓN ================= */
+
+#pagar {
+
+width: 100%;
+
+padding: 16px;
+
+border: none;
+
+border-radius: 10px;
+
+background: #0b3d91;
+
+color: white;
+
+font-size: 15px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.2s;
+
+}
+
+#pagar:hover {
+
+transform: translateY(-2px);
+
+background: #172b4d;
+
+}
+
+/* ================= RESUMEN ================= */
+
+.resumen {
+
+background: white;
+
+padding: 28px;
+
+border-radius: 20px;
+
+box-shadow:
+    0 8px 25px rgba(0,0,0,0.10);
+
+position: sticky;
+
+top: 100px;
+
+}
+
+.resumen h2 {
+
+margin-bottom: 25px;
+
+}
+
+.reserva-dato {
+
+display: flex;
+
+justify-content: space-between;
+
+gap: 15px;
+
+margin: 18px 0;
+
+}
+
+.reserva-dato span {
+
+color: #777;
+
+}
+
+.reserva-dato strong {
+
+text-align: right;
+
+}
+
+.resumen hr {
+
+border: none;
+
+border-top: 1px solid #ddd;
+
+margin: 25px 0;
+
+}
+
+/* ================= TOTAL ================= */
+
+.total {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+gap: 15px;
+
+}
+
+.total span {
+
+font-size: 18px;
+
+font-weight: bold;
+
+}
+
+.total strong {
+
+color: #0b3d91;
+
+font-size: 25px;
+
+}
+
+/* ================= SEGURIDAD ================= */
+
+.seguridad {
+
+margin-top: 30px;
+
+padding: 15px;
+
+border-radius: 10px;
+
+background: #f0f4f9;
+
+font-weight: bold;
+
+}
+
+.seguridad p {
+
+margin-top: 5px;
+
+font-size: 12px;
+
+color: #777;
+
+font-weight: normal;
+
+}
+
+/* ================= BOTON ALT COIN ================= */
+
+.boton-altcoin {
+
+display: block;
+
+width: 85%;
+
+margin: 22px auto 0;
+
+padding: 13px 15px;
+
+border-radius: 9px;
+
+background: #0b3d91;
+
+color: white;
+
+text-align: center;
+
+font-size: 14px;
+
+font-weight: bold;
+
+transition: 0.2s;
+
+}
+
+.boton-altcoin:hover {
+
+background: #172b4d;
+
+transform: translateY(-2px);
+
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 850px) {
+
+.contenedor {
+
+    grid-template-columns: 1fr;
+
+}
+
+
+.resumen {
+
+    position: static;
+
+}
+
+}
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 600px) {
+
+.header {
+
+    min-height: 65px;
+
+    padding: 10px 20px;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+}
+
+
+.logo img {
+
+    width: 70px;
+
+    margin-left: 0;
+
+}
+
+
+.menu-hamburguesa {
+
+    display: flex;
+
+}
+
+
+.navbar {
+
+    position: absolute;
+
+    top: 65px;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: #1f2764;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,0.15);
+
+}
+
+
+.navbar.activo {
+
+    display: flex;
+
+}
+
+
+.navbar a {
+
+    font-size: 16px;
+
+}
+
+
+.contenedor {
+
+    width: 95%;
+
+    padding-top: 100px;
+
+}
+
+
+.mensaje-pago {
+
+    margin-top: 90px;
+
+}
+
+
+.formulario {
+
+    padding: 25px 18px;
+
+}
+
+
+.fila-formulario {
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+}
+
+
+.tarjeta {
+
+    min-height: 200px;
+
+}
+
+
+#numeroTarjetaVista {
+
+    font-size: 17px;
+
+}
+
+
+.boton-altcoin {
+
+    width: 90%;
+
+}
+
+}
